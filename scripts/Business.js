@@ -29,3 +29,12 @@ export const manufacturing = (manufacturingObject) => {
     </article>
     `
 }
+
+export const purchasingAgent = (purchasingAgentObject) => {
+    return `
+    <article class="agents">
+        <h2 class="business__name">${purchasingAgentObject}</h2>
+        <hr class="solid">
+    </article>
+    `
+}
