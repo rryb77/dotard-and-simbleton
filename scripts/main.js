@@ -1,10 +1,9 @@
-import { manufacturing, purchasingAgent } from './Business.js';
 import { businessList } from './BusinessList.js'
-import { newYorkList } from './BusinessList.js'
-import { manufacturingList } from './BusinessList.js'
-import { purchasingAgentList } from './BusinessList.js'
+import { newYorkList } from './newYork/newYorkList.js'
+import { manufacturingList } from './manufacturing/manufacturingList.js'
+import { purchasingAgentList } from './agents/agentList.js'
 
-businessList();
-newYorkList();
-manufacturingList();
+// businessList();
+// newYorkList();
+// manufacturingList();
 purchasingAgentList();
