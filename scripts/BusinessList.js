@@ -1,5 +1,6 @@
 import { useBusinesses } from './BusinessProvider.js'
 import { Business } from './Business.js'
+import { purchasingAgent } from './agents/agent.js';
 
 const businessContent = document.querySelector(".businesses");
 const businessArray = useBusinesses();
@@ -33,29 +34,19 @@ document
                     business.companyName.includes(keyPressEvent.target.value)
             */
             
-            // implement .find() method here
-            // const foundBusiness = businessArray.find((business) => {
-            //     let userInput = document.getElementById("companySearch").value;
-            //     console.log('The user typed: ', userInput)
-
-            //     return business.companyName === userInput
-            // })
-            
-            const foundBusiness = businessArray.find(business => business.companyName.includes(document.getElementById("companySearch").value))
-
+            // implement .find() method here                 
+            const foundBusiness = businessArray.find(business => [business.purchasingAgent.nameFirst, business.purchasingAgent.nameLast].includes(document.getElementById("companySearch").value))
 
             companySearchResultArticle.innerHTML = `
                 <h2>
-                ${foundBusiness.companyName}
+                ${foundBusiness.purchasingAgent.nameFirst} ${foundBusiness.purchasingAgent.nameLast}
                 </h2>
                 <section>
-                ${foundBusiness.addressFullStreet}
+                ${foundBusiness.companyName}
 
                 </section>
                 <section>
-                ${foundBusiness.addressCity},
-                ${foundBusiness.addressStateCode}
-                ${foundBusiness.addressZipCode}
+                ${foundBusiness.phoneWork}        
                 </section>
             `;
         }
