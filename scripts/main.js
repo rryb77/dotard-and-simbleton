@@ -6,4 +6,4 @@ import { purchasingAgentList } from './agents/agentList.js'
 // businessList();
 // newYorkList();
 // manufacturingList();
-purchasingAgentList();
+// purchasingAgentList();
